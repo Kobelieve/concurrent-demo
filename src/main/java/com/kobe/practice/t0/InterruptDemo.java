@@ -13,6 +13,10 @@ public class InterruptDemo {
             } catch (InterruptedException e) {
                 System.out.println(Thread.currentThread().getName() + " into catch");
                 System.out.println("isInterrupted: " + Thread.currentThread().isInterrupted());
+                Thread.currentThread().interrupt();
+                System.out.println("after interrupt...isInterrupted: " + Thread.currentThread().isInterrupted());
+                Thread.interrupted();
+                System.out.println("after interrupted...isInterrupted: " + Thread.currentThread().isInterrupted());
             }
 
             System.out.println(Thread.currentThread().getName() + " end...");
